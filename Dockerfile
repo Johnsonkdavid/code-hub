@@ -1,16 +1,7 @@
-
-FROM alpine
-MAINTAINER johnson
-
-
-RUN apk add apache2 \
-	&& adduser -D demo
-ADD index.html /var/www/html/ 
-ADD 00.conf /etc/apache2/conf.d/00.conf
-
-
-CMD ["httpd", "-D", "FOREGROUND"]
+FROM centos:7              
+LABEL MAINTAINER=johnson   
+RUN yum install -y httpd  
+ADD  index.html /var/www/html/
+ADD  00.conf /etc/httpd/conf.d/00.conf
 EXPOSE 80
-
-
-
+CMD ["httpd", "-D", "FOREGROUND"]
