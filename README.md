@@ -1,6 +1,4 @@
-# Hello Node
-This is a very basic Hello World application written with Node.
+# Jenkins 
 
-It includes a `Dockerfile` for building a Docker image with the application, and a `Jenkinsfile` that defines a build pipeline for it.
+This includes a `Dockerfile` for building a Docker image  and a `Jenkinsfile` that defines a build pipeline for it.
 
-https://getintodevops.com
